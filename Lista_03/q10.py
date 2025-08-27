@@ -4,10 +4,14 @@ fim = int(input("Digite o fim do intervalo: "))
 print(f"\nNúmeros de Armstrong entre {inicio} e {fim}:")
 
 for n in range(inicio, fim + 1):
-    ordem = len(str(n))  # quantidade de dígitos
+    ordem = 0
+    temp = n
+    while temp > 0:
+        temp //= 10
+        ordem += 1
+
     soma = 0
     temp = n
-    
     while temp > 0:
         digito = temp % 10
         soma += digito ** ordem
