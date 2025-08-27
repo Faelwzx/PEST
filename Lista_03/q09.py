@@ -1,11 +1,13 @@
 n = int(input("Digite um número: "))
 
-
-ordem = len(str(n))
+ordem = 0
+temp = n
+while temp > 0:
+    temp //= 10
+    ordem += 1
 
 soma = 0
 temp = n
-
 while temp > 0:
     digito = temp % 10
     soma += digito ** ordem
